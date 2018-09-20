@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>JS RocketSeat Mod 2</title>
+  </head>
+  <body>
+    <!-- <input type="text" name="nome">
+    <button onClick="adicionar()">Adicionar</button> -->
+
+    <ul></ul>
+
+    <button onClick="ordenar('nome')">Ordernar por nome </button>
+    <button onClick="ordenar('idade')">Ordernar por idade </button>
+    
+    <button onClick="filtroSexo('M')">Exibir apenas homens </button>
+    <button onClick="filtroSexo('F')">Exibir apenas mulheres </button>
+    <button onClick="filtroSexo()">Exibir todos </button>
+
+    <script>
+    /* Exercicios 1 & 2      
+      
+
+      function getRandomColor() {
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+      }
+      var buttonElement = document.querySelector('#button');
+
+      buttonElement.onclick = function() {
+        var divElement = document.createElement('div');
+        divElement.style.width = '100px';
+        divElement.style.height = '100px';
+        divElement.style.backgroundColor = '#F00';
+        document.querySelector('body').appendChild(divElement);
+
+        divElement.onmouseover = function() {
+          divElement.style.backgroundColor = getRandomColor();
+        }
+      }
+    */
+    /* Exercicos 3 & 4 
+      var nomes = ['Diego', 'Gabriel', 'Lucas'];
+      var listElement = document.querySelector('ul');
+      var inputElement = document.querySelector('input');
+      
+      function addItem(text) {
+        var liElement = document.createElement('li');
+        var textElement = document.createTextNode(text);
+
+        liElement.appendChild(textElement);
+        listElement.appendChild(liElement);
+      }    
+
+      function adicionar() {
+        addItem(inputElement.value);
+        inputElement.value = '';
+      }
+
+
+      for(let name of nomes) {
+        addItem(name);
+      }
+    */
+
+    /* Execicio 5 
+
+      var users = [
+        {
+          nome: 'Diego',
+          idade: 23,
+          sexo: 'M'
+        },
+        {
+          nome: 'Gabriela',
+          idade: 18,
+          sexo: 'F'
+        },
+        {
+          nome: 'José',
+          idade: '15',
+          sexo: 'M'
+        },
+        {
+          nome: 'Maria',
+          idade: 7,
+          sexo: 'F'
+        }
+      ];
+      var listElement = document.querySelector('ul');
+      var genero = [];
+
+      function filtroSexo(sexo) {
+        genero = users.filter(function(user) {
+          return user.sexo == sexo;
+        });
+        removeUsers();
+        if(!sexo) {
+          showUser(users);
+        }
+        showUser(genero);
+      }
+
+      function ordenar(indice) {
+        var array = (genero.length == 0) ? users : genero;
+        array.sort(function(a, b) {
+          if(indice == 'nome') {
+            return a[indice] > b[indice] ? 1 : -1;
+          }
+          return a[indice] - b[indice];
+        });
+        removeUsers();
+        showUser(array);
+      }
+
+      function removeUsers() {
+        var liElements = document.querySelectorAll('li');
+        for(let li of liElements)
+          listElement.removeChild(li);
+      }
+
+      function showUser(users) {
+        for(let user of users) {
+          var sexo = user.sexo == 'M' ? 'homem' : 'mulher';
+          var liElement = document.createElement('li');
+          var textElement = document.createTextNode(user.nome + ' é ' + sexo + ' e possui ' + user.idade + ' anos');
+          liElement.appendChild(textElement);
+          listElement.appendChild(liElement);
+        }
+      }
+
+      showUser(users);
+    */
+
+    </script>
+  </body>
+</html>
+    
