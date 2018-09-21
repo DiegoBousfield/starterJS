@@ -1,3 +1,3 @@
 # Starter RocketSeat
 
-Exercice files from Rocketseat's starter courses
+Exercise files from Rocketseat's starter courses
