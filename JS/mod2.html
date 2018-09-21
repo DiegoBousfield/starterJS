@@ -99,11 +99,10 @@
         genero = users.filter(function(user) {
           return user.sexo == sexo;
         });
-        removeUsers();
         if(!sexo) {
-          showUser(users);
+          return showUser(users);
         }
-        showUser(genero);
+        return showUser(genero);
       }
 
       function ordenar(indice) {
@@ -114,17 +113,12 @@
           }
           return a[indice] - b[indice];
         });
-        removeUsers();
-        showUser(array);
-      }
 
-      function removeUsers() {
-        var liElements = document.querySelectorAll('li');
-        for(let li of liElements)
-          listElement.removeChild(li);
+        return showUser(array);
       }
 
       function showUser(users) {
+        listElement.innerHTML = '';
         for(let user of users) {
           var sexo = user.sexo == 'M' ? 'homem' : 'mulher';
           var liElement = document.createElement('li');
@@ -133,10 +127,8 @@
           listElement.appendChild(liElement);
         }
       }
-
       showUser(users);
-    */
-
+    */  
     </script>
   </body>
 </html>
