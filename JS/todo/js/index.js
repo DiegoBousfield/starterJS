@@ -6,7 +6,7 @@ var todos = [];
 
 function renderTodo() {
   listElement.innerHTML = '';
-  
+
   for(todo of todos) {
     var todoElement = document.createElement('li');
     var todoText = document.createTextNode(todo);
@@ -15,5 +15,14 @@ function renderTodo() {
     listElement.appendChild(todoElement);
   }
 }
+
+function addTodo() {
+  var todoText = inputElement.value;
+  todos.push(todoText);
+  inputElement.value = '';
+  renderTodo();
+}
+
+buttonElement.onclick = addTodo;
 
 renderTodo();
